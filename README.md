@@ -4,7 +4,7 @@
 
 ## Overview
 
-NUBILA-AI is a versatile bot designed to interact across multiple platforms, leveraging a robust architecture for data handling and reasoning. It's built with modularity in mind, allowing for easy extension and integration with new services. The bot processes user prompts, performs complex reasoning, and provides validated results through a multi-layered system. 
+CAILA-BOT is a versatile bot designed to interact across multiple platforms, leveraging a robust architecture for data handling and reasoning. It's built with modularity in mind, allowing for easy extension and integration with new services. The bot processes user prompts, performs complex reasoning, and provides validated results through a multi-layered system. 
 
 ## Architecture
 
