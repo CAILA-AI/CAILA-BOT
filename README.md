@@ -53,8 +53,57 @@ The CAILA-BOT is structured into three distinct layers:
 
 3.  **Data Layer:** The foundation of the bot. It is built around a validation network that collects and validates data from various sources to ensure reliability and accuracy. This network is decentralized, allowing for diverse inputs and robust data integrity. The data is used by the Reasoning Layer to improve responses and generate context for future prompts.
 
-    *   **Validation Process:**  The validation network uses multiple validators to ensure data is accurate. This may include methods like cross-checking sources, verifying data against known parameters, and applying statistical techniques to determine validity, and it might also be a distributed process
+    *   **Validation Process:** The validation network uses multiple validators to ensure data is accurate. This may include methods like cross-checking sources, verifying data against known parameters, and applying statistical techniques to determine validity. It may also be a distributed process.
     *    **Data Storage**: A decentralized data storage is used to keep the data.
+    *   **Data Retrieval Example:** To retrieve data, the Data Layer uses a consistent interface. Here's an example of a request and response structure when retrieving weather data:
+
+        *   **Request (Example):**
+            ```
+            入参：weather/lat=37.2144&lon=-121.8574
+            ```
+            This request asks for weather data based on latitude and longitude parameters.
+        *   **Response (Example):**
+            ```json
+            {
+              "data": {
+                "id": "0",
+                "created_at": "0001-01-01T00:00:00Z",
+                "updated_at": "0001-01-01T00:00:00Z",
+                "latitude": 37.2144,
+                "longitude": -121.8574,
+                "temperature": 9.23,
+                "temperature_min": 7.57,
+                "temperature_max": 10.37,
+                "feels_like": 7.53,
+                "pressure": 1009,
+                "humidity": 57,
+                "wind_speed": 3.09,
+                "wind_scale": 0,
+                "wind_speed_list": null,
+                "wind_scale_list": null,
+                "wind_direction": 0,
+                "condition": "Clouds",
+                "condition_desc": "broken clouds",
+                "condition_code": 803,
+                "condition_icon": "04n",
+                "uv": 0,
+                "luminance": 0,
+                "elevation": 1009,
+                "rain": 0,
+                "wet_bulb": 0,
+                "timestamp": 1737859011,
+                "timezone": -28800,
+                "location_name": "Cambrian Park",
+                "address": "",
+                "source": "o",
+                "tag": "",
+                "is_online": false,
+                "is_malfunction": false
+              },
+              "ok": true
+            }
+            ```
+           This JSON response provides detailed weather information, including temperature, humidity, wind conditions, and more. The "ok" field indicates the status of the data retrieval.
 
 ## Usage
 
