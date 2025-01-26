@@ -1,6 +1,6 @@
 # CAILA-BOT
 
-[![NUBILA-AI Architecture]([your_image_url_here.png](https://github.com/CAILA-AI/CAILA-BOT/blob/main/caila-arch.png) "NUBILA-AI Architecture")]([your_image_url_here.png](https://github.com/CAILA-AI/CAILA-BOT/blob/main/caila-arch.png))
+ [![NUBILA-AI Architecture](caila-arch.png "NUBILA-AI Architecture")](caila-arch.png)
 
 ## Overview
 
