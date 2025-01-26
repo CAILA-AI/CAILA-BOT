@@ -59,7 +59,7 @@ The CAILA-BOT is structured into three distinct layers:
 
         *   **Request (Example):**
             ```
-            入参：weather/lat=37.2144&lon=-121.8574
+            https://<weather endpoint that will release soon>/weather/lat=37.2144&lon=-121.8574
             ```
             This request asks for weather data based on latitude and longitude parameters.
         *   **Response (Example):**
