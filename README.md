@@ -4,6 +4,9 @@
 
 CAILA-BOT is a versatile bot designed to interact across multiple platforms. It leverages a robust, modular architecture for data handling and reasoning, allowing for easy extension and integration with new services. The bot processes user prompts, performs complex reasoning, and provides validated results through a multi-layered system.
 
+![tg_image_2421543055](https://github.com/user-attachments/assets/eac4fa0a-9a89-4680-97b4-969f4b213dd5)
+
+
 ## Architecture
 
 The CAILA-BOT is structured into three distinct layers:
