@@ -159,8 +159,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 *   If you have any questions or comments, please contact the team via:
     *   Email: [marketing@nubila.ai](mailto:marketing@nubila.ai)
-    *   Slack: [Link to Slack Workspace]
-    *   Discord: [[Link to Discord Channel]](https://discord.com/invite/nubila)
+    *   Discord: [[Nubila Discord Channel]](https://discord.com/invite/nubila)
 
 ---
 
