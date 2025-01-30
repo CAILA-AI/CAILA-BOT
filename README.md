@@ -113,38 +113,121 @@ The CAILA-BOT is structured into three distinct layers:
 To get started with CAILA-BOT, follow these steps:
 
 1.  **Installation:**
-    *   **Description:** Detailed instructions on how to install all the dependencies and tools needed to work with the project, including specific deployment instructions.
-    *   **Documentation Location:** [Link to installation guide]
+    *   **Description:** Detailed instructions on how to contribute to the data layer.
+    *   **Nubila Node:** [Explore Marco](https://nubila.ai/device)
+    *   **Nubila Network:** [Explore Nubila Network](https://nubila.network)
+
 2.  **Configuration:**
-    *   **Description:**  Steps to configure the necessary API keys, database connections, and other environment variables. A detailed explanation of each configuration parameter is provided to ensure smooth setup.
-    *   **Documentation Location:**  [Link to configuration guide]
+    *   **Description:** Steps to configure the necessary API keys, database connections, and other environment variables. A detailed explanation of each configuration parameter is provided to ensure smooth setup.
+    *   **Configuration Parameters:**
+
+        *   **API Keys:**
+            *   **`CAILA_API_KEY`:** This key is required to authorize requests to the CAILA-BOT API. You can obtain this key from [Link to API key acquisition].
+            *   **`DISCORD_BOT_TOKEN`** (If applicable): This token is needed if you want to run and test the Discord bot locally or use it on your server. Obtain this token from the Discord Developer Portal.
+            *   **Other platform-specific keys**: If integrating with Telegram or other platforms, you may need platform-specific API keys. This will need to be described in the documentation.
+        *   **Database Connection:**
+            *   **`DATABASE_URL` or similar:** This connection string contains information for connecting to the decentralized data storage. This might include connection strings, usernames, passwords, and so on, depending on the database used. This could also be an address or IP if it's a decentralized data storage mechanism.
+            *   **Additional database parameters:** Depending on the database technology used, more parameters may be necessary, such as `DB_USERNAME`, `DB_PASSWORD`, `DB_HOST`, `DB_PORT` etc.
+        *   **External API Endpoints**:
+            *   `WEATHER_API_ENDPOINT`: Base URL for the weather service that returns data like in the provided example.
+            *   Potentially other API endpoints for other data sources used by the bot.
+        *   **Environment Variables**:
+            *   **`BOT_MODE`** (Optional): Set the bot operation mode (e.g., `dev`, `test`, `production`).
+            *   Other environment variables can be introduced for flexibility in configuration and testing.
+        *   **Optional Configuration Parameters:**
+            *  **`SYSTEM_PROMPT`** (Optional) If you want to change the default system prompt from code, you can also have this as a configurable parameter.
+            *   **Data Validation Rules:** Parameters that determine how strict validation should be, potentially including tolerances.
+
+    *   **Setup Instructions:**
+
+        1.  **Obtain API Keys:**
+            *   Get your `CAILA_API_KEY` from the [Link to API key acquisition].
+            *   If you are using the discord bot, get a `DISCORD_BOT_TOKEN` from the [Discord Developer Portal].
+            *   If other platforms are used, acquire the required keys from their portals.
+        2.  **Set Environment Variables:**
+            *   You can set environment variables in various ways, for example:
+                *   Using your system's environment settings.
+                *   Using a `.env` file in the project's root directory (recommended for development).
+                *   For deployed environments, use your deployment platform's environment variable settings.
+            *   Create a `.env` file, if applicable, and add the following:
+
+            ```
+            CAILA_API_KEY=your_caila_api_key
+            DISCORD_BOT_TOKEN=your_discord_bot_token
+            DATABASE_URL=your_database_connection_string
+            WEATHER_API_ENDPOINT=https://<weather endpoint that will release soon>/
+            BOT_MODE=dev
+            ```
+            *   **Note:** Do not commit your `.env` file to version control, and especially don't share your keys publicly.
+        3.  **Database Configuration:**
+            *   Ensure your `DATABASE_URL` is pointing to the correct database server and the credentials are correct.
+        4.  **Testing the Configuration:**
+            * You can test your configuration by running the bot in your preferred mode (`dev`, `test`).
+            * Ensure the bot can connect to the database and the API, and respond correctly.
+
+    *   **Best Practices:**
+        *   Use `.env` files for storing sensitive configurations during development, and never commit them to the repository.
+        *   Use environment variables for production and keep them separate from your source code.
+        *   Follow your platform's best practices for securing keys and secrets.
+        *   Ensure configuration can be adjusted as the platform and requirements evolve.
+        *   Implement a way to gracefully handle configuration errors.
+    *   **Documentation Location:** [Link to configuration guide]
+
 3.  **Basic Usage Examples:**
     *   **Description:** Provides examples of how to send initial requests to the bot across different platforms. Shows how to interpret different response formats, and provides example use cases.
-    *   **Documentation Location:** [Link to usage examples guide]
-        *   **Example:**
+    *   **Documentation Location:** [Link to usage examples guide] or see the `examples` folder in the repository. 
+    *   **Local examples:**  The `examples` folder in the repository contains usage examples for various platforms and use cases.
+    *   **Example:**
+
         ```python
         # Example Python Code to call the API for processing
-            import requests
+        import requests
 
-            url = "https://api.cailabot.com/v1/process"
+        url = "https://api.cailabot.com/v1/process"
 
-            payload = {
-                "user_prompt": "Can you give me some flight recommendations?",
-                "system_prompt": "You are a helpful trip planning assistant.",
-            }
+        payload = {
+            "user_prompt": "Can you give me some flight recommendations?",
+            "system_prompt": "You are a helpful trip planning assistant.",
+        }
 
-            headers = {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer YOUR_API_KEY"
-            }
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer YOUR_API_KEY"
+        }
 
-            response = requests.post(url, json=payload, headers=headers)
-            print(response.json())
+        response = requests.post(url, json=payload, headers=headers)
+        print(response.json())
+        ```(response.json())
         ```
 
 4.  **Contribution Guidelines:**
-    *   **Description:** Clear guidelines for developers to work collaboratively on the project. It defines contribution modes, code standards, the pull request process, and how to engage in the community.
-    *   **Documentation Location:** [Link to contribution guide]
+    *   **Description:** Guidelines for developers to contribute to the project.
+
+    *   **How to Contribute:**
+        *   **Data:** Follow the instructions in the Installation section. Make sure data is accurate.
+        *   **Code:**
+            1.  Fork the repository.
+            2.  Create a branch for your changes.
+            3.  Write clear code with comments.
+            4.  Include tests for new features.
+            5.  Submit a pull request.
+        *   **Documentation:** Submit a pull request for small changes. For larger changes, open an issue first.
+
+    *   **Code Style:**
+        *   Use Python 3.
+        *   Follow PEP 8 style.
+        *   Keep comments clear and concise.
+        *   Keep `requirements.txt` up-to-date with dependencies
+    *   **Pull Requests:**
+        *   Create a branch for your changes.
+        *   Test your code.
+        *   Submit a pull request with a clear description.
+        *   Be ready to make changes based on review.
+
+    *   **Community:**
+        *   Use GitHub issues for bugs or questions.
+        *   Join our Discord channel [[Nubila Discord Channel]](https://discord.com/invite/nubila) for discussions.
+        *   Be respectful to other community members.
 
 ## Version Control
 
