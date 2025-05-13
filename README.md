@@ -1,4 +1,4 @@
-# CAILA-BOT   [![CAILA-BOT Architecture](caila-arch.png "CAILA-BOT Architecture")](caila-arch.png)
+# CAILA-BOT   ![截屏2025-05-13 11 32 25](https://github.com/user-attachments/assets/16ddc13b-42ff-43eb-a8fd-46764b4b7f98)
 
 ## Overview
 
@@ -6,7 +6,6 @@ CAILA AI Agent is an AI-powered travel and lifestyle recommendation engine based
 
 This service can be integrated into map applications, social platforms, OTAs, lifestyle apps, and is also suitable for the AI Agent ecosystem, such as the MCP protocol on BNB Chain, providing Weather+LBS fusion intelligent travel and entertainment API support.
 
-![截屏2025-05-13 11 32 25](https://github.com/user-attachments/assets/16ddc13b-42ff-43eb-a8fd-46764b4b7f98)
 
 ## CAILA AI Agent Architecture
 
